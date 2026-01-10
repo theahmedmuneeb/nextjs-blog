@@ -26,3 +26,19 @@ content:
         fields:
           - { name: url, label: URL, type: image }
       - { name: body, label: Body, type: rich-text }
+  - name: models
+    label: Models
+    type: collection
+    path: _models
+    view:
+      fields: [ title ]
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+
+      - name: features
+        label: Features
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string, required: true }
+          - { name: value, label: Value, type: string }
